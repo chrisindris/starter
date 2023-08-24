@@ -9,6 +9,14 @@ if true then return {} end
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
+
+  { "nvim-lua/plenary.nvim", lazy = true },
+
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
+
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
 
